@@ -2,7 +2,7 @@
 title: Fernando IA
 emoji: 🎭
 colorFrom: purple
-colorTo: secondary
+colorTo: purple
 sdk: gradio
 sdk_version: 5.44.1
 app_file: app.py
