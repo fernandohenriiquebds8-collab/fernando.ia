@@ -1,0 +1,18 @@
+{
+  "name": "fernando-ia",
+  "version": "1.0.0",
+  "description": "Portfólio e Landing Page para Fernando IA - Manipulação Facial",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "deploy": "vercel --prod"
+  },
+  "keywords": [
+    "facefusion",
+    "ai",
+    "face-swap",
+    "vercel"
+  ],
+  "author": "Fernando IA",
+  "license": "MIT"
+}

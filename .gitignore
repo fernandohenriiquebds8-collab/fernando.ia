@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.env
+
+# Vercel
+.vercel
+.vercel_build_output
+
+# Git
+.git/
+
+# Node
+node_modules/
+package-lock.json
+
+# FaceFusion / ML Models
+models/
+outputs/
+temp/
+*.mp4
+*.jpg
+*.jpeg
+*.png
+!index.html
+!logo.png
+
+# Jupyter Notebooks
+.ipynb_checkpoints
+# fernando_ia.ipynb # Keeping notebooks if they want to share links, but the link in index.html is to Colab anyway
