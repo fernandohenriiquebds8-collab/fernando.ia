@@ -36,10 +36,10 @@ def render() -> None:
 		'visible': False
 	}
 	if is_target_image:
-		target_image_options['value'] = TARGET_FILE.value.get('path')
+		target_image_options['value'] = TARGET_FILE.value.get('path') if isinstance(TARGET_FILE.value, dict) else TARGET_FILE.value
 		target_image_options['visible'] = True
 	if is_target_video:
-		target_video_options['value'] = TARGET_FILE.value.get('path')
+		target_video_options['value'] = TARGET_FILE.value.get('path') if isinstance(TARGET_FILE.value, dict) else TARGET_FILE.value
 		target_video_options['visible'] = True
 	TARGET_IMAGE = gradio.Image(**target_image_options)
 	TARGET_VIDEO = gradio.Video(**target_video_options)

@@ -99,6 +99,11 @@
             to { transform: translate(100px, 50px) scale(1.2); }
         }
 
+        @keyframes glow {
+            from { box-shadow: 0 0 20px rgba(0, 212, 255, 0.4); }
+            to { box-shadow: 0 0 50px rgba(124, 58, 237, 0.6); transform: scale(1.02); }
+        }
+
         /* --- Layout --- */
         .container {
             max-width: 1200px;
@@ -123,6 +128,7 @@
             margin-bottom: 30px;
             background: linear-gradient(135deg, white 30%, var(--primary) 70%, var(--secondary));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -4px;
             filter: drop-shadow(0 10px 20px rgba(0, 212, 255, 0.2));
@@ -295,17 +301,23 @@
 
     <div class="container">
         <section class="hero">
+            <div class="logo-container" style="text-align: center; margin-bottom: 20px;">
+                <img src="facefusion_app/facefusion/uis/assets/logo.png" alt="Fernando IA Logo" style="width: 120px; height: 120px; border-radius: 50%; border: 2px solid var(--primary); box-shadow: 0 0 30px rgba(0, 212, 255, 0.4); animation: glow 4s infinite alternate; cursor: default; object-fit: cover;">
+            </div>
             <h1>Fernando IA</h1>
             <p class="description">
                 Elevando a manipulação facial ao próximo nível. Troca de rostos em tempo real e geração de assets sintéticos com <span class="glow-text">tecnologia de ponta em IA.</span>
             </p>
             
             <div class="actions">
-                <a href="https://colab.research.google.com/github/fernandohenriiquebds8-collab/fernando.ia/blob/main/fernando_ia.ipynb" class="btn btn-primary" target="_blank">
-                    <span>🚀 Abrir no Google Colab</span>
+                <a href="https://huggingface.co/spaces/fernandohenriiquebds8-collab/fernando-ia" class="btn btn-primary" target="_blank">
+                    <span>🎭 Abrir Web App (Hugging Face)</span>
+                </a>
+                <a href="https://colab.research.google.com/github/fernandohenriiquebds8-collab/fernando.ia/blob/main/fernando_ia.ipynb" class="btn btn-secondary" target="_blank">
+                    <span>🚀 Google Colab</span>
                 </a>
                 <a href="https://github.com/fernandohenriiquebds8-collab/fernando.ia/wiki" class="btn btn-secondary" target="_blank">
-                    📖 Ver Documentação
+                    📖 Wiki
                 </a>
             </div>
         </section>

@@ -1,4 +1,5 @@
 gradio==5.44.1
+gradio-rangeslider==0.0.8
 numpy
 onnxruntime
 opencv-python
@@ -9,3 +10,5 @@ insightface
 facexlib
 gdown
 requests
+psutil
+filetype

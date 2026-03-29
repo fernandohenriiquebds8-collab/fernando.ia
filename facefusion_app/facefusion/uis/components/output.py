@@ -18,7 +18,10 @@ def render() -> None:
 	global OUTPUT_VIDEO
 
 	if not state_manager.get_item('output_path'):
-		downloads_directory = Path.home().joinpath('Downloads', 'GenSpark_Edits')
+		if os.environ.get('SPACE_ID') or os.environ.get('HF_HOME'):
+			downloads_directory = Path('results')
+		else:
+			downloads_directory = Path.home().joinpath('Downloads', 'GenSpark_Edits')
 		downloads_directory.mkdir(parents=True, exist_ok=True)
 		state_manager.set_item('output_path', str(downloads_directory))
 	OUTPUT_PATH_TEXTBOX = gradio.Textbox(
